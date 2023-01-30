@@ -9,8 +9,7 @@ object Main {
       s=s+n
       n = scala.io.StdIn.readInt()
     }
-    println(s)
-    var moy:Float = s.toFloat/(i-1)
+    val moy:Float = s.toFloat/(i-1)
     println(f"Moyenne : $moy%.2f")
   }
 }
