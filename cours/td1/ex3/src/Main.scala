@@ -11,11 +11,12 @@ object Main {
         b = b - a
       }
     }
-    if (a == 0) {
-      println("PGCD : " + b)
+    val res: String = if (a == 0) {
+      "PGCD : " + b
     }
-    if (b == 0) {
-      println("PGCD : " + a)
+    else {
+      "PGCD : " + a
     }
+    println(res)
   }
 }
