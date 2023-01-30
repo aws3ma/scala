@@ -1,3 +1,4 @@
+import scala.compiletime.ops.float
 object Main {
   def main(args: Array[String]): Unit = {
     var n: Int = 0
@@ -5,23 +6,21 @@ object Main {
       print("donner taille du tableau : ")
       n = scala.io.StdIn.readInt()
     }
-    var tab = new Array[Float](n)
-    var i: Int = 0
-    for (i <- 0 to n - 1) {
+    val tab = new Array[Float](n)
+    tab.indices.foreach{ i => 
       print(f"t[$i]")
       tab(i) = scala.io.StdIn.readFloat()
     }
-
     println(tab.mkString(", "))
-    var sum = tab.sum
+    val sum = tab.sum
     println(f"Somme : $sum")
-    var moy = sum / n
+    val moy = sum / n
     println(f"Moyenne : $moy")
-    var min = tab.min
-    var max = tab.max
+    val min = tab.min
+    val max = tab.max
     println(f"Max : $max")
     println(f"Min : $min")
-    var sorted = tab.sorted
+    val sorted = tab.sorted
     println(sorted.mkString(", "))
   }
 }
