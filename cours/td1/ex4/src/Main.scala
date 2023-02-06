@@ -6,22 +6,22 @@ object Main {
       print("Entrer un entier superieur a 20 : ")
       n = scala.io.StdIn.readInt()
     }
-    var i: Int = 0
-
-    for (i <- 2 to n) {
-      if (nbDivide(i) == 1) {
-        println(i)
-      }
-    }
+    // for (i <- 2 to n) {
+    //   if (nbDivide(i) == 1) {
+    //     println(i)
+    //   }
+    // }
+    val nbrPremiers = for(i <- 2 to n if(!(2 until i).exists(x => i %x ==0)))  yield i
+    print(nbrPremiers)
   }
-  def nbDivide(x: Int): Int = {
-    var s: Int = 0
-    var j: Int = 0
-    for (j <- 2 to x) {
-      if (x % j == 0) {
-        s = s + 1
-      }
-    }
-    return s
-  }
+  // def nbDivide(x: Int): Int = {
+  //   var s: Int = 0
+  //   var j: Int = 0
+  //   for (j <- 2 to x) {
+  //     if (x % j == 0) {
+  //       s = s + 1
+  //     }
+  //   }
+  //   return s
+  // }
 }
