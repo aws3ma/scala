@@ -6,8 +6,8 @@ object Main {
     val age: Int = scala.io.StdIn.readInt()
     print("Votre moyenne : ")
     val moyenne: Float = scala.io.StdIn.readFloat()
-    println("Nom : "+nom)
-    println("Age : "+age)
+    printf("Nom : %s",nom)
+    print(f"Age : $age")
     println("Moyenne : "+moyenne)
   }
 }
